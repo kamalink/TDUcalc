@@ -1,7 +1,9 @@
 
 class RevsValue {
     static double revsValue(Objects o) {
-        if (o.getMaxRevs() > 4 && o.getMaxRevs() < 5) {
+        if(o.getMaxRevs() >=3 && o.getMaxRevs() < 4){
+            return revsValueFr0m3To4(o);
+        } else if (o.getMaxRevs() >=4 && o.getMaxRevs() < 5) {
             return revsValueFrom4To5(o);
         } else if(o.getMaxRevs() >= 5 && o.getMaxRevs() < 6){
             return revsValueFrom5To6(o);
@@ -13,8 +15,45 @@ class RevsValue {
             return revsValueFrom8To9(o);
         }
         return 0;}
+
+
+    private static double revsValueFr0m3To4(Objects o){
+        if (o.getMaxRevs() == 3.0) {
+            return 160;
+        } else if (o.getMaxRevs() == 3.1) {
+            return 158;
+        } else if (o.getMaxRevs() == 3.2) {
+            return 157;
+        } else if (o.getMaxRevs() == 3.3) {
+            return 155;
+        } else if (o.getMaxRevs() == 3.4) {
+            return 154;
+        } else if (o.getMaxRevs() == 3.5) {
+            return 152;
+        } else if (o.getMaxRevs() == 3.6) {
+            return 151;
+        } else if (o.getMaxRevs() == 3.7) {
+            return 150;
+        } else if (o.getMaxRevs() == 3.8) {
+            return 149;
+        } else if (o.getMaxRevs() == 3.9) {
+            return 148;
+        }
+        return 0;
+    }
+
     private static double revsValueFrom4To5(Objects o) {
-        if (o.getMaxRevs() == 4.5) {
+        if(o.getMaxRevs() == 4.0){
+            return 145;
+        } else if (o.getMaxRevs() == 4.1) {
+            return 143;
+        } else if (o.getMaxRevs() == 4.2) {
+            return 142;
+        } else if (o.getMaxRevs() == 4.3) {
+            return 140;
+        } else if (o.getMaxRevs() == 4.4) {
+            return 139;
+        } else if (o.getMaxRevs() == 4.5) {
             return 137;
         } else if (o.getMaxRevs() == 4.6) {
             return 136;
@@ -25,7 +64,9 @@ class RevsValue {
         } else if (o.getMaxRevs() == 4.9) {
             return 133;
         }
-        return 0;}
+        return 0;
+    }
+
     private static double revsValueFrom5To6(Objects o) {
         if (o.getMaxRevs() == 5.0) {
             return 132;
